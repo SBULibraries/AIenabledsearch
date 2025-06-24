@@ -10,8 +10,8 @@ from typing import Dict, Optional, Tuple, List
 from requests.adapters import HTTPAdapter, Retry
 import requests
 
-HOST = os.getenv("LLM_HOST", "https://chatgpt.microsopht.com/ollama")
-API_KEY = os.getenv("LLM_API_KEY", "sk-0c1c84e2c0ae4dbca4b71681577b9412")
+HOST = os.getenv("LLM_HOST")
+API_KEY = os.getenv("LLM_API_KEY")
 MODEL = os.getenv("LLM_MODEL", "llama3:latest")
 REQUEST_TIMEOUT = int(os.getenv("LLM_TIMEOUT", "60")) 
 MAX_RETRIES = int(os.getenv("LLM_MAX_RETRIES", "3"))
